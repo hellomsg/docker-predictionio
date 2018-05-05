@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 as base
+FROM ubuntu:14.04
 
 ENV DEBIAN_FRONTEND=noninteractive TERM=xterm
 RUN echo "export > /etc/envvars" >> /root/.bashrc && \
