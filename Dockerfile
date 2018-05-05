@@ -64,6 +64,7 @@ ENV PATH $PATH:$PIO_HOME/bin
 
 #Download SBT
 COPY .sbt /root/.sbt
+RUN sed -i "s/0.13.15/0.13.16/" /PredictionIO/project/build.properties
 RUN cd /PredictionIO && sbt/sbt --verbose package 
 
 ARG BUILD_INFO
