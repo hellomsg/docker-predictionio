@@ -64,7 +64,7 @@ ENV PATH $PATH:$PIO_HOME/bin
 
 #Download SBT
 COPY .sbt /root/.sbt
-RUN cd /PredictionIO && sbt/sbt package 
+RUN cd /PredictionIO && sbt/sbt --verbose package 
 
 ARG BUILD_INFO
 LABEL BUILD_INFO=$BUILD_INFO
